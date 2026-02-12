@@ -861,14 +861,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                padding: 20px 20px;
-            }
-
-            nav.scrolled {
-                padding: 15px 20px;
-            }
-
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -902,13 +894,6 @@
             .services-grid,
             .projects-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .services,
-            .projects,
-            .about,
-            .contact {
-                padding: 60px 20px;
             }
         }
 
@@ -989,7 +974,7 @@
         <div class="hero-content">
             <div class="hero-badge">Rosignano Solvay</div>
             <h1>Costruiamo il tuo <span>Futuro</span></h1>
-            <p class="hero-subtitle">EdilService - Professionalità ed esperienza nel settore edile da oltre 20 anni</p>
+            <p class="hero-subtitle">EdilService - Professionalità ed esperienza nel settore edile dal 1994</p>
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                     Richiedi Preventivo
@@ -1066,14 +1051,15 @@
         <div class="section-header reveal">
             <h2>Progetti Realizzati</h2>
             <p>Alcuni dei nostri lavori più significativi nella zona di Rosignano Solvay e dintorni</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card reveal">
-                <div class="project-image">🏢</div>
-                <div class="project-info">
-                    <h3>Complesso Residenziale</h3>
-                    <p>Costruzione di 12 unità abitative a Rosignano Marittimo</p>
-                </div>
+        <div class="project-card reveal">
+    <div class="project-image">
+        <img src="https://cdn.armut.com/ProfilePics/tr:w-700,h-700/75861d41-32e0-4720-9d7b-1a1ae5403498.jpeg" alt="Descrizione Immagine" style="width:100%; height:auto;">
+    </div>
+    <div class="project-info">
+        <h3>Bagni</h3>
+        <p>Ristrutturazione bagni</p>
+    </div>
+</div>
             </div>
             <div class="project-card reveal">
                 <div class="project-image">🏪</div>
@@ -1362,9 +1348,7 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.hero-bg');
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
         });
 
         // Service card tilt effect
