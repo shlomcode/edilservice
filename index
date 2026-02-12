@@ -861,6 +861,14 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            nav {
+                padding: 20px 20px;
+            }
+
+            nav.scrolled {
+                padding: 15px 20px;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -894,6 +902,13 @@
             .services-grid,
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .services,
+            .projects,
+            .about,
+            .contact {
+                padding: 60px 20px;
             }
         }
 
@@ -1347,7 +1362,9 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.hero-bg');
-            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
 
         // Service card tilt effect
